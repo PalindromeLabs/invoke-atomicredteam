@@ -71,8 +71,8 @@ function Install-AtomicsFolder {
 			# disable progress bar for faster performances
 			$ProgressPreference_backup = $global:ProgressPreference
             $global:ProgressPreference = "SilentlyContinue"
-			
-            Invoke-WebRequest $url -OutFile $path
+	    Write-Output $url
+            Invoke-WebRequest $url -OutFile $path | Select -ExpandProperty Headers
 
             write-verbose "Extracting ART to $InstallPath"
             $zipDest = Join-Path "$DownloadPath" "tmp"
