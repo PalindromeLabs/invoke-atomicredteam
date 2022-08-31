@@ -40,7 +40,7 @@ function Install-AtomicsFolder {
         [string]$DownloadPath = $InstallPath,
 
         [Parameter(Mandatory = $False, Position = 2)]
-        [string]$RepoOwner = "redcanaryco",
+        [string]$RepoOwner = "PalindromeLabs",
 
         [Parameter(Mandatory = $False, Position = 3)]
         [string]$Branch = "master",
